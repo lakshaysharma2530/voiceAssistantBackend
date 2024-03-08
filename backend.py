@@ -1,3 +1,7 @@
+import nltk
+nltk.download('stopwords')
+nltk.download('punkt')
+
 from fastapi import FastAPI
 import pandas as pd
 from nltk import word_tokenize
@@ -6,9 +10,6 @@ from nltk.stem import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from pathlib import Path
-import nltk
-nltk.download('stopwords')
-nltk.download('punkt')
 
 app = FastAPI()
 from fastapi.middleware.cors import CORSMiddleware
